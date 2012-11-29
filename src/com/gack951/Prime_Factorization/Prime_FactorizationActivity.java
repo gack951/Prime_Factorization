@@ -46,7 +46,6 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 				}
 				output_temp = Long.toString(num) + " = ";
 				sqrt_num = (long)(Math.sqrt(num));
-				//textview1.setText(output_temp + " " + Long.toString(sqrt_num));
 
 				if(num % 2 == 0&&num!=2){
 					while(num % 2 == 0){
