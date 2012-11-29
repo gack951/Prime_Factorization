@@ -15,11 +15,9 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-		Button show_button;
-		Button clear_button;
-		show_button = (Button)findViewById(R.id.show_button);
+		Button show_button= (Button)findViewById(R.id.show_button);
+		Button clear_button= (Button)findViewById(R.id.clear_button);
 		show_button.setOnClickListener(this);
-		clear_button = (Button)findViewById(R.id.clear_button);
 		clear_button.setOnClickListener(this);
     }
 
