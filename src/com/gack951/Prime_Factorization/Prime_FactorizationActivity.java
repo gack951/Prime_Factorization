@@ -57,6 +57,7 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 						factors[i][1]++;
 						num /= 2;
 					}
+					sqrt_num=(long)(Math.sqrt(num));
 					i++;
 				}
 				while (w <= sqrt_num)
@@ -69,6 +70,7 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 							factors[i][1]++;
 							num /= w;
 						}
+						sqrt_num=(long)(Math.sqrt(num));
 						i++;
 					}
 					w += 2;
