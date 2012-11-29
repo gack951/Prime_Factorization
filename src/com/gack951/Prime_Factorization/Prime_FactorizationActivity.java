@@ -1,10 +1,10 @@
 package com.gack951.Prime_Factorization;
 
-import android.app.Activity;
-import android.os.Bundle;
-import android.widget.*;
+import android.app.*;
+import android.os.*;
 import android.view.*;
 import android.view.View.*;
+import android.widget.*;
 
 public class Prime_FactorizationActivity extends Activity implements OnClickListener{
 
