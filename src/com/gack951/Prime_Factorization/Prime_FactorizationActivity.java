@@ -26,7 +26,7 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 	public void onClick(View v){
 		TextView textview1=(TextView)findViewById(R.id.textview1);
 		EditText edit1=(EditText)findViewById(R.id.edit1);
-		switch (v.getId()){
+		switch(v.getId()){
 			case R.id.show_button:
 				long num,w=3,sqrt_num;
 				int i=0,j=1;
@@ -36,15 +36,15 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 				try{
 					num = Long.parseLong(edit1.getText().toString());
 				}
-				catch (NumberFormatException e){
+				catch(NumberFormatException e){
 					return;
 				}
 				output_temp = Long.toString(num) + "=";
 				sqrt_num = (long)(Math.sqrt(num));
 				//textview1.setText(output_temp + " " + Long.toString(sqrt_num));
 
-				if (num % 2 == 0){
-					while (num % 2 == 0){
+				if(num % 2 == 0){
+					while(num % 2 == 0){
 						factors[i][0] = 2;
 						factors[i][1]++;
 						num /= 2;
@@ -52,10 +52,10 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 					sqrt_num = (long)(Math.sqrt(num));
 					i++;
 				}
-				while (w <= sqrt_num){
-					if (num % w == 0){
+				while(w <= sqrt_num){
+					if(num % w == 0){
 						factors[i][0] = w;
-						while (num % w == 0){
+						while(num % w == 0){
 							factors[i][1]++;
 							num /= w;
 						}
@@ -65,21 +65,21 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 					w += 2;
 				}
 
-				if (i == 0){
+				if(i == 0){
 					output_temp += "(素数)";
 				}else{
 					output_temp += Long.toString(factors[0][0]);
-					if (factors[0][1] > 1){
+					if(factors[0][1] > 1){
 						output_temp += "^" + Long.toString(factors[0][1]);
 					}
-					while (j < i){
+					while(j < i){
 						output_temp += "×" + Long.toString(factors[j][0]);
-						if (factors[j][1] > 1){
+						if(factors[j][1] > 1){
 							output_temp += "^" + Long.toString(factors[j][1]);
 						}
 						j++;
 					}
-					if (num != 1){
+					if(num != 1){
 						output_temp += "×" + Long.toString(num);
 					}
 				}
