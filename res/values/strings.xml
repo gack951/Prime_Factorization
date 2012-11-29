@@ -2,7 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, Prime_FactorizationActivity!</string>
-    <string name="app_name">Prime_Factorization</string>
+    <string name="app_name">素因数分解</string>
     <string name="clear_button_label">クリア</string>
     <string name="show_button_label">表示</string>
 
