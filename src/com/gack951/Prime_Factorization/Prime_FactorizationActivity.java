@@ -37,13 +37,18 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 					num = Long.parseLong(edit1.getText().toString());
 				}
 				catch(NumberFormatException e){
+					edit1.setText("");
+					return;
+				}
+				if(num<=1){
+					edit1.setText("");
 					return;
 				}
 				output_temp = Long.toString(num) + " = ";
 				sqrt_num = (long)(Math.sqrt(num));
 				//textview1.setText(output_temp + " " + Long.toString(sqrt_num));
 
-				if(num % 2 == 0){
+				if(num % 2 == 0&&num!=2){
 					while(num % 2 == 0){
 						factors[i][0] = 2;
 						factors[i][1]++;
