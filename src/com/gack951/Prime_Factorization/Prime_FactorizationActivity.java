@@ -76,14 +76,14 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 					output_temp += " ^ " + Long.toString(factors[0][1]);
 				}
 				while (j < i) {
-					output_temp += " ÁE" + Long.toString(factors[j][0]);
+					output_temp += " × " + Long.toString(factors[j][0]);
 					if (factors[j][1] > 1) {
 						output_temp += " ^ " + Long.toString(factors[j][1]);
 					}
 					j++;
 				}
 				if (num != 1) {
-					output_temp += " ÁE" + Long.toString(num);
+					output_temp += " × " + Long.toString(num);
 				}
 			}
 			textview1.setText(output_temp + "\n\n" + textview1.getText().toString());
