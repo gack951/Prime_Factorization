@@ -8,6 +8,8 @@
         android:id="@+id/edit1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+		android:hint="素因数分解する数を入力"
+		android:maxLength="19"
         android:inputType="number" >
 
         <requestFocus />

@@ -25,9 +25,7 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 		EditText edit1 = (EditText) findViewById(R.id.edit1);
 		switch (v.getId()) {
 		case R.id.show_button:
-			long num,
-			w = 3,
-			sqrt_num;
+			long num,w = 7,sqrt_num;
 			int i = 0,
 			j = 1;
 			String output_temp = "";
@@ -55,6 +53,24 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 				sqrt_num = (long) (Math.sqrt(num));
 				i++;
 			}
+			if (num % 3 == 0 && num != 3) {
+				while (num % 3 == 0) {
+					factors[i][0] = 3;
+					factors[i][1]++;
+					num /= 3;
+				}
+				sqrt_num = (long) (Math.sqrt(num));
+				i++;
+			}
+			if (num % 5== 0 && num != 5) {
+				while (num % 5 == 0) {
+					factors[i][0] = 5;
+					factors[i][1]++;
+					num /= 5;
+				}
+				sqrt_num = (long) (Math.sqrt(num));
+				i++;
+			}
 			while (w <= sqrt_num) {
 				if (num % w == 0) {
 					factors[i][0] = w;
@@ -66,6 +82,39 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 					i++;
 				}
 				w += 2;
+				
+				if (num % w == 0) {
+					factors[i][0] = w;
+					while (num % w == 0) {
+						factors[i][1]++;
+						num /= w;
+					}
+					sqrt_num = (long) (Math.sqrt(num));
+					i++;
+				}
+				w += 2;
+				
+				if (num % w == 0) {
+					factors[i][0] = w;
+					while (num % w == 0) {
+						factors[i][1]++;
+						num /= w;
+					}
+					sqrt_num = (long) (Math.sqrt(num));
+					i++;
+				}
+				w += 2;
+				
+				if (num % w == 0) {
+					factors[i][0] = w;
+					while (num % w == 0) {
+						factors[i][1]++;
+						num /= w;
+					}
+					sqrt_num = (long) (Math.sqrt(num));
+					i++;
+				}
+				w += 4;
 			}
 
 			if (i == 0) {
