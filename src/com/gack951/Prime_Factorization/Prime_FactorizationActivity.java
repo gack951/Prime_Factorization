@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.*;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class Prime_FactorizationActivity extends Activity implements OnClickListener {
 
@@ -26,6 +28,7 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 		switch (v.getId()) {
 		case R.id.show_button:
 			long num,w = 7,sqrt_num;
+			long num_divisors=1;
 			int i = 0,
 			j = 1;
 			String output_temp = "";
@@ -135,7 +138,13 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 					output_temp += " × " + Long.toString(num);
 				}
 			}
-			textview1.setText(output_temp + "\n\n" + textview1.getText().toString());
+			for(int k=0;k<=i;k++){
+				num_divisors*=factors[k][1]+1;
+			}
+			if (num != 1) {
+				num_divisors*=2;
+			}
+			textview1.setText(output_temp + "\n" + "\t約数の個数 > "+ num_divisors + "\n" + textview1.getText().toString());
 			edit1.setText("");
 			break;
 		case R.id.clear_button:
