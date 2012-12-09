@@ -143,7 +143,7 @@ public class Prime_FactorizationActivity extends Activity implements OnClickList
 				for(int k=0;k <= i;k++){
 					num_divisors *= factors[k][1] + 1;
 				}
-				textview1.setText(output_temp + "\n" + "\t約数の個数 > " + num_divisors + "\n" + textview1.getText().toString());
+				textview1.setText(output_temp + "\n" + "    約数の個数 > " + num_divisors + "\n" + textview1.getText().toString());
 				edit1.setText("");
 				break;
 			case R.id.clear_button:
